@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust Sound:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyH-pT-FII">
+                                <rect key="frame" x="16" y="178" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.1764705926" green="0.63137257099999999" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="NoVolume.png" maximumValueImage="FullVolume.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Ha-qZ-F1B">
+                                <rect key="frame" x="14" y="218" width="284" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9wA-ih-bDy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider Example" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx2-om-l73">
+                                <rect key="frame" x="91" y="54" width="138" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.87689917129999995" green="0.54989280029999998" blue="0.44214601720000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AyH-pT-FII" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="158" id="9Uc-eQ-NoG"/>
+                            <constraint firstItem="Zx2-om-l73" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="34" id="GYA-KJ-Vhd"/>
+                            <constraint firstItem="1Ha-qZ-F1B" firstAttribute="leading" secondItem="AyH-pT-FII" secondAttribute="leading" id="PbQ-MO-0C5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ha-qZ-F1B" secondAttribute="trailing" constant="8" id="jLk-VZ-7EZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Zx2-om-l73" secondAttribute="centerX" id="oVH-LU-h5w"/>
+                            <constraint firstItem="AyH-pT-FII" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rVj-hc-NSH"/>
+                            <constraint firstItem="1Ha-qZ-F1B" firstAttribute="top" secondItem="AyH-pT-FII" secondAttribute="bottom" constant="19" id="zZ9-n9-0gR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="slider" destination="1Ha-qZ-F1B" id="zNM-kS-hvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="533"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FullVolume.png" width="30" height="30"/>
+        <image name="NoVolume.png" width="23" height="23"/>
+    </resources>
+</document>
